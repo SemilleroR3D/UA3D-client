@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# UA3D - UniAmazonia 3D
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="http://45.71.181.109/source-ua3d/logo-icon.png" alt="UA3D Logo" width="100" heiht="100">
 
-Currently, two official plugins are available:
+Bienvenido al repositorio del proyecto **UA3D - UniAmazonia 3D**. Este proyecto es una iniciativa del Semillero de Investigación R3D de la Universidad de la Amazonia que busca crear una representación virtual en 3D del campus universitario, permitiendo a los usuarios explorar y navegar por el campus de manera interactiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción del Proyecto
 
-## Expanding the ESLint configuration
+UA3D tiene como objetivo principal proporcionar una herramienta innovadora y educativa que permita a los estudiantes, profesores y visitantes conocer las instalaciones de la Universidad de la Amazonia de manera virtual. Esta herramienta será especialmente útil para los nuevos estudiantes que deseen familiarizarse con el campus antes de su llegada.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Características Principales
 
-- Configure the top-level `parserOptions` property like this:
+- **Exploración Interactiva**: Permite a los usuarios recorrer el campus universitario en un entorno 3D.
+- **Información Detallada**: Proporciona información sobre los edificios y áreas específicas del campus.
+- **Accesibilidad**: Acceso fácil y gratuito a través de la web.
+- **Actualizaciones Constantes**: El modelo se actualizará periódicamente para reflejar cambios en el campus.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Tecnologías Utilizadas
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Vite**: Herramienta de desarrollo rápida para aplicaciones web modernas.
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **Tailwind CSS**: Framework de CSS para un diseño rápido y eficiente.
+- **TypeScript**: Superset de JavaScript que añade tipos estáticos.
+- **shadcn/ui**: Biblioteca de componentes UI para React.
+
+## Instalación y Uso
+
+Para ejecutar el proyecto localmente, sigue estos pasos:
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/SemilleroR3D/UA3D-client.git
