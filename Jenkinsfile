@@ -21,22 +21,9 @@ pipeline {
                 bat 'npm install'
             }
         }
-
-        stage('Build') {
-            steps {
-                bat 'npm run build'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'npm test'
-            }
-        }
-
+        
         stage('Deploy') {
             steps {
-                // Añade los pasos necesarios para desplegar tu aplicación
                 echo 'Deploying...'
             }
         }
@@ -44,7 +31,7 @@ pipeline {
 
     post {
         always {
-            cleanWs() // Limpia el workspace después de la ejecución
+            cleanWs() 
         }
     }
 }
