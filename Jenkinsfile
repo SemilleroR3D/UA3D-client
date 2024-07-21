@@ -19,7 +19,7 @@ pipeline {
         
         stage('Run Proyect') {
             steps {
-               bat 'npm run start'
+               bat 'npm run dev'
             }
         }
     }
