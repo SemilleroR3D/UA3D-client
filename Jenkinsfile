@@ -1,10 +1,5 @@
 pipeline {
     agent any
-
-    tools {
-        nodejs 'NodeJS' // Nombre de la instalación de NodeJS en Jenkins
-    }
-
     environment {
         CI = 'true'
     }
@@ -22,9 +17,9 @@ pipeline {
             }
         }
         
-        stage('Deploy') {
+        stage('Run Proyect') {
             steps {
-                echo 'Deploying...'
+               bat 'npm run start'
             }
         }
     }
