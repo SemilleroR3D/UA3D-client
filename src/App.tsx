@@ -1,11 +1,12 @@
-import LandingLayout from './layouts/landing'
-import { ThemeProvider } from './components/app/navbar/theme-provider'
+import LandingLayout from '@/layouts/landing'
+import { ThemeProvider } from '@/components/app/navbar/theme-provider'
 import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import ErrorPage from './pages/ErrorPage'
-import HomePage from './pages/Landing/HomePage'
+import ErrorPage from '@/pages/ErrorPage'
+import HomePage from '@/pages/Landing/HomePage'
+import AboutPage from '@/pages/Landing/AboutPage'
 
 const LandingRoutes = [
   {
@@ -17,6 +18,10 @@ const LandingRoutes = [
       {
         path: '/',
         element: <HomePage />
+      },
+      {
+        path: '/about',
+        element: <AboutPage />
       }
     ]
   }

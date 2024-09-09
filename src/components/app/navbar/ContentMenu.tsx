@@ -14,23 +14,20 @@ import {
 } from '@/components/ui/navigation-menu'
 import CustomLink from './CustomLink'
 
-const components: { title: string; href: string; description: string }[] = [
+const components = [
   {
     title: 'Laboratorio IoT',
-    href: '#',
+    href: '/iot-lab',
     description: 'Su mejor experiencia en los procesos de enseñanza y aprendizaje.'
   },
   {
     title: 'Events',
-    href: '#',
-    description: 'Su mejor experiencia en los procesos de enseñanza y aprendizaje.'
+    href: '/events',
+    description: 'Conéctate con los últimos eventos.'
   }
 ]
 
-const ListItem = forwardRef<
-  ElementRef<'a'>,
-  ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
+const ListItem = forwardRef<ElementRef<'a'>, ComponentPropsWithoutRef<'a'>>(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -58,6 +55,7 @@ export default function ContentMenu () {
 
   return (
     <>
+      {/* Menú para pantallas pequeñas */}
       <div className='block md:hidden'>
         <DropdownMenu>
           <DropdownMenuTrigger className='p-3 space-x-3 text-gray-700 dark:text-gray-300'>
@@ -66,21 +64,21 @@ export default function ContentMenu () {
           <DropdownMenuContent className='bg-white dark:bg-gray-800'>
             {location.pathname !== '/' && (
               <DropdownMenuItem asChild>
-                <CustomLink to='/' className='menu-item'>Inicio</CustomLink>
+                <CustomLink to='/'>Inicio</CustomLink>
               </DropdownMenuItem>
             )}
             <DropdownMenuItem asChild>
-              <CustomLink to='/about' className='menu-item'>Acerca de</CustomLink>
+              <CustomLink to='/about'>Acerca de</CustomLink>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <CustomLink to='/dashboard' className='menu-item'>DashBoard</CustomLink>
+              <CustomLink to='/dashboard'>DashBoard</CustomLink>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <CustomLink to='/projects' className='menu-item'>Proyectos</CustomLink>
+              <CustomLink to='/projects'>Proyectos</CustomLink>
             </DropdownMenuItem>
             {components.map((component) => (
               <DropdownMenuItem key={component.title} asChild>
-                <CustomLink to={component.href} className='menu-item'>
+                <CustomLink to={component.href}>
                   {component.title}
                 </CustomLink>
               </DropdownMenuItem>
@@ -88,6 +86,8 @@ export default function ContentMenu () {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+
+      {/* Menú para pantallas grandes */}
       <div className='hidden md:block'>
         <NavigationMenu>
           <NavigationMenuList>
@@ -107,7 +107,6 @@ export default function ContentMenu () {
                   <li className='row-span-3'>
                     <NavigationMenuLink asChild>
                       <CustomLink to='/' className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'>
-
                         <div className='mb-2 mt-4 text-lg font-medium'>Uniamazonia 3D</div>
                         <p className='text-sm leading-tight text-muted-foreground'>
                           Su mejor experiencia en los procesos de enseñanza y aprendizaje.

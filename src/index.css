@@ -1,18 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: 'Norwester';
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(@fontsource/norwester/files/norwester-latin-400-normal.woff2) format('woff2'), url(@fontsource/norwester/files/norwester-latin-400-normal.woff) format('woff');
+  src: url(@fontsource/norwester/files/norwester-latin-400-normal.woff2) format('woff2'),
+       url(@fontsource/norwester/files/norwester-latin-400-normal.woff) format('woff');
 }
 
 @layer base {
   body {
     font-family: 'Norwester', sans-serif;
   }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -59,7 +62,6 @@
   }
 }
 
-
 body {
   --sb-track-color: #232E33;
   --sb-thumb-color: #098817;
@@ -67,7 +69,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size)
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
@@ -78,13 +80,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 10px;
-  
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
 
